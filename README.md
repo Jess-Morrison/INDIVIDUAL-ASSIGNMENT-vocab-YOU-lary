@@ -94,3 +94,6 @@ Create issue tickets from the items below to help you get started.
 <img width="607" alt="Screen Shot 2022-06-04 at 10 57 43 AM" src="https://user-images.githubusercontent.com/67666661/172013873-fa1893a4-1663-48c4-98da-ecc34a1c81b5.png">
 <img width="592" alt="Screen Shot 2022-06-04 at 10 57 54 AM" src="https://user-images.githubusercontent.com/67666661/172013882-c67dba60-bb88-4882-896b-d421d757058b.png">
 <img width="443" alt="Screen Shot 2022-06-04 at 10 56 12 AM" src="https://user-images.githubusercontent.com/67666661/172013895-77b709d7-8f0f-479a-99b2-e8c890c245c6.png">
+![Screen Shot 2022-06-04 at 12 40 42 PM](https://user-images.githubusercontent.com/67666661/172019406-9d5bda4f-8dc2-4729-8a0f-81f0764b92fa.png)
+![Screenshot_20220604-124354_Samsung Notes](https://user-images.githubusercontent.com/67666661/172019412-8d411160-a85c-4ab8-9490-c0df79bcbd7e.jpg)
+
