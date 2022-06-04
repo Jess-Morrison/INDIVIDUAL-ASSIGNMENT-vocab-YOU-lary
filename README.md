@@ -89,3 +89,8 @@ Create issue tickets from the items below to help you get started.
 - [ ] If an entry is public, anyone can READ it. If it is private, only the user who created it can see it.
 - [ ] If an entry is public, only the user who created it can CRUD on it
 - [ ] If an entry is public, any user can copy the entry to their own set of entries and then CRUD on the new/copied entry
+
+<img width="690" alt="Screen Shot 2022-06-04 at 10 57 12 AM" src="https://user-images.githubusercontent.com/67666661/172013868-5835a7d7-5d9c-4a09-a491-f57759eb8980.png">
+<img width="607" alt="Screen Shot 2022-06-04 at 10 57 43 AM" src="https://user-images.githubusercontent.com/67666661/172013873-fa1893a4-1663-48c4-98da-ecc34a1c81b5.png">
+<img width="592" alt="Screen Shot 2022-06-04 at 10 57 54 AM" src="https://user-images.githubusercontent.com/67666661/172013882-c67dba60-bb88-4882-896b-d421d757058b.png">
+<img width="443" alt="Screen Shot 2022-06-04 at 10 56 12 AM" src="https://user-images.githubusercontent.com/67666661/172013895-77b709d7-8f0f-479a-99b2-e8c890c245c6.png">
