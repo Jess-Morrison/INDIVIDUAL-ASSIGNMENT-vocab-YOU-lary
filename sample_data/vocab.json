@@ -1,7 +1,7 @@
 {
   "-MiBsfuTafbEQ7eAULxV" : {
     "word" : "cat",
-    "card_id" : "-MiBsfuTafbEQ7eAULxV",
+    "firebaseKey" : "-MiBsfuTafbEQ7eAULxV",
     "definition" : "Tomi",
     "tech_name" : "Javascript",
     "time_entry": "",
@@ -9,7 +9,7 @@
   },
   "-MiBt86VzkC-EGmJnxjm" : {
     "word" : "dog",
-    "card_id" : "-MiBt86VzkC-EGmJnxjm",
+    "firebaseKey" : "-MiBt86VzkC-EGmJnxjm",
     "definition" : "Bark",
     "tech_name" : "HTML",
     "time_entry": "",
@@ -17,7 +17,7 @@
   },
   "-MiBtwf1BwN9pGavQeR3" : {
     "word" : "sun",
-    "card_id" : "-MiBtwf1BwN9pGavQeR3",
+    "firebaseKey" : "-MiBtwf1BwN9pGavQeR3",
     "definition" : "Howard",
     "tech_name" : "CSS",
     "time_entry": "",
@@ -25,7 +25,7 @@
   },
   "-MiBuOfHv9NCKB_cneij" : {
     "word" : "swing",
-    "card_id" : "-MiBuOfHv9NCKB_cneij",
+    "firebaseKey" : "-MiBuOfHv9NCKB_cneij",
     "definition" : "Angie",
     "tech_name" : "Javascript",
     "time_entry": "",
@@ -33,7 +33,7 @@
   },
   "-MiBulenBnY8by9Xn7q1" : {
     "word" : "park",
-    "card_id" : "-MiBulenBnY8by9Xn7q1",
+    "firebaseKey" : "-MiBulenBnY8by9Xn7q1",
     "definition" : "Colson",
     "tech_name" : "HTML",
     "time_entry": "",
@@ -41,7 +41,7 @@
   },
   "-MiBv9_aOEJQWoobjz_U" : {
     "word" : "PET",
-    "card_id" : "-MiBv9_aOEJQWoobjz_U",
+    "firebaseKey" : "-MiBv9_aOEJQWoobjz_U",
     "definition" : "Mikki",
     "tech_name" : "CSS",
     "time_entry": "",
@@ -49,7 +49,7 @@
   },
   "-MiBvQiWr6XNwNa1i3-0" : {
     "word" : "SKY",
-    "card_id" : "-MiBvQiWr6XNwNa1i3-0",
+    "firebaseKey" : "-MiBvQiWr6XNwNa1i3-0",
     "definition" : "L.L",
     "tech_name" : "HTML",
     "time_entry": "",
@@ -57,7 +57,7 @@
   },
   "-MiBw4tCvNZd23yTVDQw" : {
     "word" : "SHOE",
-    "card_id" : "-MiBw4tCvNZd23yTVDQw",
+    "firebaseKey" : "-MiBw4tCvNZd23yTVDQw",
     "definition" : "James",
     "tech_name" : "CSS",
     "time:entry": "",
