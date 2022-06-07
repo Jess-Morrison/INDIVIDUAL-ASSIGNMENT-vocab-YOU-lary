@@ -4,4 +4,4 @@ const clearDom = () => {
   document.querySelector('#view').innerHTML = '';
 };
 
-export default clearDom();
+export default clearDom;
