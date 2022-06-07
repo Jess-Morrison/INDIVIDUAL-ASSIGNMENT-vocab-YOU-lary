@@ -19,7 +19,7 @@ const cardForm = (obj = {}) => {
   </div>
   <div class="word-definition">
     <label for="word-definition">Definition:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="word-definition" rows="3"></textarea>
   </div>
 </form>`;
   renderToDom('#form-container', domString);
