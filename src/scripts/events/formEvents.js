@@ -10,10 +10,11 @@ const showForm = () => {
         tech_name: document.querySelector('#lanaguageSelection').value,
         definition: document.querySelector('#word-definition').value
       };
-      document.querySelector('#new-card').addEventListener('click', () => {
-        createCard(cardInput).then(showVocabCards);
-        console.warn('You clicked new card');
-      });
+      createCard(cardInput).then(showVocabCards);
+      // document.querySelector('#new-card').addEventListener('click', () => {
+      //   createCard(cardInput).then(showVocabCards);
+      //   console.warn('You clicked new card');
+      // });
     }
   });
 };
