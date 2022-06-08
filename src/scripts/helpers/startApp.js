@@ -4,13 +4,17 @@ import logoutButton from '../components/logoutButton';
 import navBar from '../components/navBar';
 import showVocabCards from '../components/pages/showCards';
 import domEvents from '../events/domEvents';
+import showForm from '../events/formEvents';
+import navEvents from '../events/navEvents';
 
 const startApp = () => {
   domBuilder();
   navBar();
   logoutButton();
-  getCards().then((vocabArray) => showVocabCards(vocabArray));
+  showForm();
   domEvents();
+  navEvents();
+  getCards().then((vocabArray) => showVocabCards(vocabArray));
 };
 
 export default startApp;

@@ -11,9 +11,10 @@ const navBar = () => {
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">New Card</a>
-      <div id="login-form-container"></div>
-    </div>
+      <div id='newCard'>
+      <a class="nav-item nav-link active" href="#" id= 'new-card'>New Card</a>
+      </div>
+    
   </div>
 </nav>`;
 

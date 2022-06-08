@@ -19,7 +19,23 @@ const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// create card
+
+const createCard = (cardObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/vocabs.json`, cardObj)
+    .then((response) => {
+      const payLoad = {
+        firebaseKey: response.data.name
+      };
+      axios.patch(`${dbUrl}/vocabs/${response.data.name}.json`, payLoad)
+        .then(() => {
+          getCards(cardObj).then(resolve);
+        });
+    }).catch(reject);
+});
+
 export {
   getCards,
-  deleteCard
+  deleteCard,
+  createCard
 };

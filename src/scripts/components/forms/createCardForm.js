@@ -4,7 +4,7 @@ import renderToDom from '../../helpers/renderToDom';
 const cardForm = (obj = {}) => {
   clearDom();
   const domString = `<form id=" ${obj.firebaseKey ? `update-card--${obj.firebaseKey}`
-    : 'submit-card'}">
+    : 'submit-card'}"class="mb-4">
   <div class="form-group">
     <label for="wordName">Word:</label>
     <input type="wordName" class="form-control" id="wordName" placeholder="String">
@@ -19,8 +19,9 @@ const cardForm = (obj = {}) => {
   </div>
   <div class="word-definition">
     <label for="word-definition">Definition:</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="word-definition" rows="3"></textarea>
   </div>
+  <button type="submit" id="submit" class="btn btn-primary mt-3">Submit</button>
 </form>`;
   renderToDom('#form-container', domString);
 };
