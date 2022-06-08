@@ -22,12 +22,12 @@ const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
 // create card
 
 const createCard = (cardObj) => new Promise((resolve, reject) => {
-  axios.post(`${dbUrl}vocabs.json`, cardObj)
+  axios.post(`${dbUrl}/vocabs.json`, cardObj)
     .then((response) => {
       const payLoad = {
-        firebasekey: response.data.word
+        firebaseKey: response.data.name
       };
-      axios.patch(`${dbUrl}/vocabs/${response.data.word}.json`, payLoad)
+      axios.patch(`${dbUrl}/vocabs/${response.data.name}.json`, payLoad)
         .then(() => {
           getCards(cardObj).then(resolve);
         });

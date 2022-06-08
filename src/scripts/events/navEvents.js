@@ -1,16 +1,15 @@
-import { createCard } from '../../api/vocabData';
-import showVocabCards from '../components/pages/showCards';
+import cardForm from '../components/forms/createCardForm';
 
 const navEvents = () => {
-  document.querySelector('#navigation').addEventListener('click', (e) => {
-  // Event for showing form
-    if (e.target.id.includes('newCard')) {
-      console.warn('New card clicked');
-      // eslint-disable-next-line no-alert
-      const [, firebaseKey] = e.target.id.split('--');
-      createCard(firebaseKey).then(showVocabCards);
-    }
-  });
+  // document.querySelector('#logout-button')
+  //   .addEventListener('click', signOut);
+
+  // Show Form via "New Card"
+  document.querySelector('#new-card').addEventListener('click', cardForm);
+  //  if (e.target.includes('newCard')) {
+  //    const [, firebaseKey]
+  //  }
+  // Return to Home screen
 };
 
 export default navEvents;

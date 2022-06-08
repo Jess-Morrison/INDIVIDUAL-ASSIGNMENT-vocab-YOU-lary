@@ -10,7 +10,8 @@ const showForm = () => {
         tech_name: document.querySelector('#lanaguageSelection').value,
         definition: document.querySelector('#word-definition').value
       };
-      createCard(cardInput).then(showVocabCards);
+      console.warn('CLICKED SUBMIT BOOK', e.target.id);
+      createCard(cardInput).then((vocabArray) => showVocabCards(vocabArray));
       // document.querySelector('#new-card').addEventListener('click', () => {
       //   createCard(cardInput).then(showVocabCards);
       //   console.warn('You clicked new card');
