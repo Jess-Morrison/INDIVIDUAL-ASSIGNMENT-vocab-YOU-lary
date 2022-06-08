@@ -1,15 +1,16 @@
-import signOut from '../helpers/auth/signOut';
-import cardForm from '../components/forms/createCardForm';
+import { createCard } from '../../api/vocabData';
+import showVocabCards from '../components/pages/showCards';
 
 const navEvents = () => {
-  document.querySelector('#logout-button')
-    .addEventListener('click', signOut);
-
-  // Show Form via "New Card"
-  document.querySelector('#newCard').addEventListener('click', cardForm);
-  //  if (e.target.includes('newCard')) {
-  //    const [, firebaseKey]
-  //  }
+  document.querySelector('#navigation').addEventListener('click', (e) => {
+  // Event for showing form
+    if (e.target.id.includes('newCard')) {
+      console.warn('New card clicked');
+      // eslint-disable-next-line no-alert
+      const [, firebaseKey] = e.target.id.split('--');
+      createCard(firebaseKey).then(showVocabCards);
+    }
+  });
 };
 
 export default navEvents;
