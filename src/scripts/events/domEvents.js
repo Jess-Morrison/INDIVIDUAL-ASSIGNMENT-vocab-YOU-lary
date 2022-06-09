@@ -1,5 +1,7 @@
-import { deleteCard } from '../../api/vocabData';
+import { deleteCard, filterCard, getSingleCard } from '../../api/vocabData';
+import cardForm from '../components/forms/createCardForm';
 import showVocabCards from '../components/pages/showCards';
+// import showForm from './formEvents';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -10,6 +12,15 @@ const domEvents = () => {
         const [, firebaseKey] = e.target.id.split('--');
         deleteCard(firebaseKey).then(showVocabCards);
       }
+    }
+    if (e.target.id.includes('update-card')) {
+      console.warn('EDIT BOOK', e.target.id);
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleCard(firebaseKey).then(cardForm);
+    }
+
+    if (e.target.id === 'javascript') {
+      filterCard('javascript').then(showVocabCards);
     }
   });
 };
