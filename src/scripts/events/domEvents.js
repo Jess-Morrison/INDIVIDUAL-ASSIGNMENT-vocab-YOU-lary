@@ -21,8 +21,18 @@ const domEvents = () => {
 
     if (e.target.id.includes('javascript')) {
       console.warn('btn clicked', e.target.id);
-      filterCard().then(showVocabCards);
+      filterCard('Javascript').then(showVocabCards);
     }
+    if (e.target.id.includes('html')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard('HTML').then(showVocabCards);
+    }
+    if (e.target.id.includes('css')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard('CSS').then(showVocabCards);
+    }
+
+    // Stretch Goal: When a user adds a new language, they can filter on it
   });
 };
 

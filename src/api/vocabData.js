@@ -39,7 +39,7 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
 const filterCard = (tech_name) => new Promise((resolve, reject) => {
   // eslint-disable-next-line camelcase
   axios.get(`${dbUrl}/vocabs.json?orderBy="tech_name"&equalTo="${tech_name}"`)
-    .then((response) => resolve(Object.values(response.filter('javascript'))))
+    .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
 
