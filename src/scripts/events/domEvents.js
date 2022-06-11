@@ -17,12 +17,12 @@ const domEvents = (uid) => {
     if (e.target.id.includes('update-card')) {
       console.warn('EDIT CARD', e.target.id);
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleCard(uid, firebaseKey).then(cardForm);
+      getSingleCard(firebaseKey).then(cardForm);
     }
     // Event for filtering cards by language
     if (e.target.id.includes('javascript')) {
       console.warn('btn clicked', e.target.id);
-      filterCard('Javascript', uid).then(showVocabCards);
+      filterCard('JavaScript' || 'Javascript').then(showVocabCards, uid);
     }
     if (e.target.id.includes('html')) {
       console.warn('btn clicked', e.target.id);
@@ -32,8 +32,6 @@ const domEvents = (uid) => {
       console.warn('btn clicked', e.target.id);
       filterCard('CSS', uid).then(showVocabCards);
       // eslint-disable-next-line new-cap
-      const d = new Date();
-      console.warn(d);
     }
 
     // Stretch Goal: When a user adds a new language, they can filter on it

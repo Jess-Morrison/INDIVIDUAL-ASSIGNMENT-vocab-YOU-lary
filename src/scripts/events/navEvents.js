@@ -3,7 +3,7 @@ import cardForm from '../components/forms/createCardForm';
 import showVocabCards from '../components/pages/showCards';
 // import showVocabCards from '../components/pages/showCards';
 
-const navEvents = (cardObj) => {
+const navEvents = (uid) => {
   // document.querySelector('#logout-button')
   //   .addEventListener('click', signOut);
 
@@ -14,7 +14,7 @@ const navEvents = (cardObj) => {
   //  }
   // Return to Home screen
   document.querySelector('#home').addEventListener('click', () => {
-    getCards(cardObj.uid).then(showVocabCards);
+    getCards(uid).then(showVocabCards, uid);
   });
 };
 

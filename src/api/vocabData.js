@@ -6,7 +6,13 @@ const dbUrl = firebaseConfig.databaseURL;
 // see cards
 const getCards = (uid) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/vocabs.json?orderBy="uid"&equalTo="${uid}"`)
-    .then((response) => resolve(Object.values(response.data)))
+    .then((response) => {
+      if (response.data) {
+        resolve(Object.values(response.data));
+      } else {
+        resolve([]);
+      }
+    })
     .catch((error) => reject(error));
 });
 // delete card
@@ -21,7 +27,7 @@ const deleteCard = (firebaseKey) => new Promise((resolve, reject) => {
 
 // create card
 
-const createCard = (cardObj) => new Promise((resolve, reject) => {
+const createCard = (cardObj, uid) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/vocabs.json`, cardObj)
     .then((response) => {
       const payLoad = {
@@ -31,7 +37,7 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
       };
       axios.patch(`${dbUrl}/vocabs/${response.data.name}.json`, payLoad)
         .then(() => {
-          getCards(cardObj.uid).then(resolve);
+          getCards(cardObj, uid).then(resolve);
         });
     }).catch(reject);
 });
@@ -72,11 +78,8 @@ const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
 // Update Card
 
 const updateCard = (cardObject) => new Promise((resolve, reject) => {
-  const payLoad = {
-    time_entry: new Date()
-  };
-  axios.patch(`${dbUrl}/vocabs/${cardObject.firebaseKey}.json`, cardObject, payLoad)
-    .then(() => getCards().then(resolve))
+  axios.patch(`${dbUrl}/vocabs/${cardObject.firebaseKey}.json`, cardObject)
+    .then(() => getCards(cardObject).then(resolve))
     .catch((error) => reject(error));
 });
 
