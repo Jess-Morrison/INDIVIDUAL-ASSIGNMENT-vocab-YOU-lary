@@ -14,13 +14,14 @@ const domEvents = () => {
       }
     }
     if (e.target.id.includes('update-card')) {
-      console.warn('EDIT BOOK', e.target.id);
+      console.warn('EDIT CARD', e.target.id);
       const [, firebaseKey] = e.target.id.split('--');
       getSingleCard(firebaseKey).then(cardForm);
     }
 
-    if (e.target.id === 'javascript') {
-      filterCard('javascript').then(showVocabCards);
+    if (e.target.id.includes('javascript')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard().then(showVocabCards);
     }
   });
 };

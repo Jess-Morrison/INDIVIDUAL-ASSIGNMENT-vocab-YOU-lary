@@ -1,4 +1,7 @@
+import { getCards } from '../../api/vocabData';
 import cardForm from '../components/forms/createCardForm';
+import showVocabCards from '../components/pages/showCards';
+// import showVocabCards from '../components/pages/showCards';
 
 const navEvents = () => {
   // document.querySelector('#logout-button')
@@ -10,6 +13,9 @@ const navEvents = () => {
   //    const [, firebaseKey]
   //  }
   // Return to Home screen
+  document.querySelector('#home').addEventListener('click', () => {
+    getCards().then(showVocabCards);
+  });
 };
 
 export default navEvents;
