@@ -1,5 +1,7 @@
-import { deleteCard } from '../../api/vocabData';
+import { deleteCard, filterCard, getSingleCard } from '../../api/vocabData';
+import cardForm from '../components/forms/createCardForm';
 import showVocabCards from '../components/pages/showCards';
+// import showForm from './formEvents';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -11,6 +13,26 @@ const domEvents = () => {
         deleteCard(firebaseKey).then(showVocabCards);
       }
     }
+    if (e.target.id.includes('update-card')) {
+      console.warn('EDIT CARD', e.target.id);
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleCard(firebaseKey).then(cardForm);
+    }
+
+    if (e.target.id.includes('javascript')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard('Javascript').then(showVocabCards);
+    }
+    if (e.target.id.includes('html')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard('HTML').then(showVocabCards);
+    }
+    if (e.target.id.includes('css')) {
+      console.warn('btn clicked', e.target.id);
+      filterCard('CSS').then(showVocabCards);
+    }
+
+    // Stretch Goal: When a user adds a new language, they can filter on it
   });
 };
 

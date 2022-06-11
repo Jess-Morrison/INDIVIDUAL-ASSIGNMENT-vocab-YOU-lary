@@ -1,5 +1,5 @@
 import showVocabCards from '../components/pages/showCards';
-import { createCard } from '../../api/vocabData';
+import { createCard, getSingleCard, updateCard } from '../../api/vocabData';
 
 const showForm = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -16,6 +16,18 @@ const showForm = () => {
       //   createCard(cardInput).then(showVocabCards);
       //   console.warn('You clicked new card');
       // });
+    }
+    if (e.target.id.includes('update-card')) {
+      getSingleCard().then(() => {
+        const [, firebaseKey] = e.target.id.split('--');
+        const updateInput = {
+          word: document.querySelector('#wordName').value,
+          tech_name: document.querySelector('#lanaguageSelection').value,
+          definition: document.querySelector('#word-definition').value,
+          firebaseKey
+        };
+        updateCard(updateInput).then(showVocabCards);
+      });
     }
   });
 };
