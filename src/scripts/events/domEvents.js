@@ -13,12 +13,13 @@ const domEvents = () => {
         deleteCard(firebaseKey).then(showVocabCards);
       }
     }
+    // Event for updating card
     if (e.target.id.includes('update-card')) {
       console.warn('EDIT CARD', e.target.id);
       const [, firebaseKey] = e.target.id.split('--');
       getSingleCard(firebaseKey).then(cardForm);
     }
-
+    // Event for filtering cards by language
     if (e.target.id.includes('javascript')) {
       console.warn('btn clicked', e.target.id);
       filterCard('Javascript').then(showVocabCards);
