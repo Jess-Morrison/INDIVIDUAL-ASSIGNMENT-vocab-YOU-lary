@@ -44,6 +44,23 @@ const filterCard = (tech_name) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// Filter cards by time entered any language
+// eslint-disable-next-line camelcase
+const timeFilter = (time_entry) => new Promise((resolve, reject) => {
+  // eslint-disable-next-line camelcase
+  axios.get(`${dbUrl}/vocabs.json?orderBy="time_entry"&equalTo="${time_entry}"`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
+});
+// Filter cards by time entered by language
+// eslint-disable-next-line camelcase
+const timeLangFilter = (time_entry, tech_name) => new Promise((resolve, reject) => {
+  // eslint-disable-next-line camelcase
+  axios.get(`${dbUrl}/vocabs.json?orderBy="time_entry"&equalTo="${time_entry}"&orderBy="tech_name"&equalTo="${tech_name}"`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
+});
+
 // Get Single Card
 const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/vocabs/${firebaseKey}.json`)
@@ -68,5 +85,7 @@ export {
   createCard,
   filterCard,
   getSingleCard,
-  updateCard
+  updateCard,
+  timeFilter,
+  timeLangFilter
 };
