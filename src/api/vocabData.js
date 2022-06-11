@@ -25,7 +25,8 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/vocabs.json`, cardObj)
     .then((response) => {
       const payLoad = {
-        firebaseKey: response.data.name
+        firebaseKey: response.data.name,
+        time_entry: new Date()
       };
       axios.patch(`${dbUrl}/vocabs/${response.data.name}.json`, payLoad)
         .then(() => {
@@ -53,7 +54,10 @@ const getSingleCard = (firebaseKey) => new Promise((resolve, reject) => {
 // Update Card
 
 const updateCard = (cardObject) => new Promise((resolve, reject) => {
-  axios.patch(`${dbUrl}/vocabs/${cardObject.firebaseKey}.json`, cardObject)
+  const payLoad = {
+    time_entry: new Date()
+  };
+  axios.patch(`${dbUrl}/vocabs/${cardObject.firebaseKey}.json`, cardObject, payLoad)
     .then(() => getCards().then(resolve))
     .catch((error) => reject(error));
 });

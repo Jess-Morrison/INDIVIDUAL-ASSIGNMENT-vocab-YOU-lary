@@ -30,6 +30,9 @@ const domEvents = () => {
     if (e.target.id.includes('css')) {
       console.warn('btn clicked', e.target.id);
       filterCard('CSS').then(showVocabCards);
+      // eslint-disable-next-line new-cap
+      const d = new Date();
+      console.warn(d);
     }
 
     // Stretch Goal: When a user adds a new language, they can filter on it
