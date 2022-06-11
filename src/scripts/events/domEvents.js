@@ -9,8 +9,8 @@ const domEvents = () => {
     if (e.target.id.includes('delete-card-btn')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Are you sure?')) {
-        const [, firebaseKey] = e.target.id.split('--');
-        deleteCard(firebaseKey).then(showVocabCards);
+        const [uid, firebaseKey] = e.target.id.split('--');
+        deleteCard(uid, firebaseKey).then(showVocabCards);
       }
     }
     // Event for updating card

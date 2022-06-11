@@ -4,8 +4,8 @@ import firebaseConfig from './apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // see cards
-const getCards = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/vocabs.json`)
+const getCards = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/vocabs.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
@@ -26,11 +26,12 @@ const createCard = (cardObj) => new Promise((resolve, reject) => {
     .then((response) => {
       const payLoad = {
         firebaseKey: response.data.name,
-        time_entry: new Date()
+        time_entry: new Date(),
+        uid: response.data.uid
       };
       axios.patch(`${dbUrl}/vocabs/${response.data.name}.json`, payLoad)
         .then(() => {
-          getCards(cardObj).then(resolve);
+          getCards(cardObj.uid).then(resolve);
         });
     }).catch(reject);
 });
