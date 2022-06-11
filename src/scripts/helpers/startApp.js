@@ -7,14 +7,14 @@ import domEvents from '../events/domEvents';
 import showForm from '../events/formEvents';
 import navEvents from '../events/navEvents';
 
-const startApp = () => {
+const startApp = (user) => {
   domBuilder();
   navBar();
   logoutButton();
-  showForm();
-  domEvents();
-  navEvents();
-  getCards().then((vocabArray) => showVocabCards(vocabArray));
+  showForm(user.uid);
+  domEvents(user.uid);
+  navEvents(user.uid);
+  getCards(user.uid).then((vocabArray) => showVocabCards(vocabArray));
 };
 
 export default startApp;
