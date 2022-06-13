@@ -1,4 +1,5 @@
-import { deleteCard, filterCard, getSingleCard } from '../../api/vocabData';
+/* eslint-disable object-curly-newline */
+import { deleteCard, filterCard, getSingleCard, getCards } from '../../api/vocabData';
 import cardForm from '../components/forms/createCardForm';
 import showVocabCards from '../components/pages/showCards';
 // import showForm from './formEvents';
@@ -10,7 +11,7 @@ const domEvents = (uid) => {
       // eslint-disable-next-line no-alert
       if (window.confirm('Are you sure?')) {
         const [, firebaseKey] = e.target.id.split('--');
-        deleteCard(uid, firebaseKey).then(showVocabCards);
+        deleteCard(firebaseKey).then(() => getCards(uid).then(showVocabCards, uid));
       }
     }
     // Event for updating card
