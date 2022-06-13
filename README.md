@@ -90,10 +90,11 @@ Create issue tickets from the items below to help you get started.
 - [ ] If an entry is public, only the user who created it can CRUD on it
 - [ ] If an entry is public, any user can copy the entry to their own set of entries and then CRUD on the new/copied entry
 
-<img width="690" alt="Screen Shot 2022-06-04 at 10 57 12 AM" src="https://user-images.githubusercontent.com/67666661/172013868-5835a7d7-5d9c-4a09-a491-f57759eb8980.png">
-<img width="607" alt="Screen Shot 2022-06-04 at 10 57 43 AM" src="https://user-images.githubusercontent.com/67666661/172013873-fa1893a4-1663-48c4-98da-ecc34a1c81b5.png">
-<img width="592" alt="Screen Shot 2022-06-04 at 10 57 54 AM" src="https://user-images.githubusercontent.com/67666661/172013882-c67dba60-bb88-4882-896b-d421d757058b.png">
-<img width="443" alt="Screen Shot 2022-06-04 at 10 56 12 AM" src="https://user-images.githubusercontent.com/67666661/172013895-77b709d7-8f0f-479a-99b2-e8c890c245c6.png">
+<img width="1269" alt="Screen Shot 2022-06-12 at 10 13 16 PM" src="https://user-images.githubusercontent.com/67666661/173273331-c9e7efa9-5ba6-4877-9392-0a6f259cbbaa.png">
+<img width="885" alt="Screen Shot 2022-06-12 at 10 13 30 PM" src="https://user-images.githubusercontent.com/67666661/173273353-752ebceb-724c-4a75-8015-c77aa1eb2356.png">
+<img width="1264" alt="Screen Shot 2022-06-12 at 10 13 56 PM" src="https://user-images.githubusercontent.com/67666661/173273368-8732e9f9-b908-4550-89b2-e0fb0c76dc6f.png">
+
+
 ![Screen Shot 2022-06-04 at 12 40 42 PM](https://user-images.githubusercontent.com/67666661/172019435-4573dbf5-1c08-4ea2-9543-49fca0c00221.png)
 ![Screenshot_20220604-124354_Samsung Notes](https://user-images.githubusercontent.com/67666661/172019479-b765601d-a439-4777-a7ff-08280e3204fb.jpg)
 
