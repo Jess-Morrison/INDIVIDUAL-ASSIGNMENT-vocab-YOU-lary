@@ -3,8 +3,37 @@
 
 
 body {
-  background-color: antiquewhite;
+  background-color: plum;
   color: brown;
   text-align: center;
   margin-top: 100px;
 }
+// #navigation {
+//   align-items: center;
+//   align-content: center;
+// }
+#login-form-container{
+padding: 30px;
+}
+
+#home{
+  text-align: center;
+}
+
+#javascript{
+  border-radius: 12px;}
+
+  #css{
+    border-radius: 12px;}
+  #html{
+      border-radius: 12px;}
+
+      #store {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        justify-content: center;
+        color: hotpink;
+        margin: 30px;
+        padding: 30px;   
+      }
