@@ -8,7 +8,7 @@ import showForm from '../events/formEvents';
 import navEvents from '../events/navEvents';
 
 const startApp = (user) => {
-  domBuilder(user.uid);
+  domBuilder();
   navBar();
   logoutButton();
   showForm(user.uid);
